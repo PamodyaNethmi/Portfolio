@@ -5,7 +5,7 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 
 .bg {
@@ -13,13 +13,92 @@
     top: -4rem;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: 1;
     object-fit: cover;
     height: 100vh;
     opacity: 0;
     transform: translateY(40px);
     animation: fadeInUpAndFloat 5s ease-in-out infinite;
     animation-fill-mode: forwards;
+}
+
+#intro::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    border-radius: 50%;
+    z-index: 0; 
+    box-shadow: 
+        15vw 12vh #fff, 
+        28vw 45vh #fff, 
+        42vw 15vh #fff, 
+        55vw 75vh #fff, 
+        68vw 30vh #fff,
+        82vw 85vh #fff, 
+        93vw 40vh #fff, 
+        8vw 65vh #fff, 
+        35vw 88vh #fff,
+        50vw 22vh #fff,
+        62vw 58vh #fff,
+        78vw 10vh #fff,
+        45vw 40vh #fff, 
+        12vw 25vh #fff,
+        22vw 60vh #fff,
+        38vw 80vh #fff,
+        58vw 15vh #fff,
+        72vw 65vh #fff,
+        85vw 35vh #fff,
+        90vw 75vh #fff,
+        30vw 10vh #fff,
+        65vw 90vh #fff,
+        88vw 60vh #fff,
+        22vw 70vh #fff;
+    opacity: 0.7;
+    animation: starsFlyingContinuous 30s linear infinite;
+}
+
+#intro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5px;
+    height: 1.5px;
+    background: transparent;
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 
+        5vw 25vh #fff, 
+        18vw 80vh #fff, 
+        32vw 35vh #fff, 
+        48vw 60vh #fff, 
+        59vw 12vh #fff,
+        73vw 90vh #fff, 
+        85vw 20vh #fff, 
+        95vw 70vh #fff, 
+        12vw 50vh #fff,
+        25vw 15vh #fff,
+        38vw 75vh #fff,
+        52vw 40vh #fff,
+        65vw 85vh #fff,
+        77vw 48vh #fff,
+        3vw 45vh #fff,  
+        10vw 85vh #fff,
+        20vw 15vh #fff,
+        40vw 70vh #fff,
+        50vw 95vh #fff,
+        60vw 35vh #fff,
+        70vw 55vh #fff,
+        80vw 25vh #fff,
+        92vw 85vh #fff,
+        87vw 50vh #fff,
+        90vw 5vh #fff;
+    opacity: 0.5;
+    animation: starsFlyingContinuous 50s linear infinite;
 }
 
 .introContent {
@@ -80,8 +159,33 @@
         opacity: 1;
         transform: translateY(-15px);
     }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px); 
+    }
     
    
+}
+
+@keyframes starsFlying {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-200vh);
+    }
+}
+
+@keyframes starsFlyingContinuous {
+    0% {
+        
+        transform: translateY(0);
+    }
+    100% {
+        
+        transform: translateY(-100vh); 
+    }
 }
 
 @media screen and (max-width:840px) {

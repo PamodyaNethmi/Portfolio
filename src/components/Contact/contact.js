@@ -53,7 +53,7 @@ const Contact = () => {
                 <button type='submit' value='Send' className="submitBtn">Submit</button>
                 <div className="links">
                     <a href="https://www.linkedin.com/in/pamodya-nethmi-563b63370/" target="_blank" rel="noopener noreferrer"><img src={LinkedinIcon} alt="Linkedin" className="link linkedin" /></a>
-                    <img src={FacebookIcon} alt="Facebook" className="link" />
+                    <a href="https://www.facebook.com/share/17Z4DXtqyn/" target="_blank" rel="noopener noreferrer"><img src={FacebookIcon} alt="Facebook" className="link" /></a>
                     <img src={TwitterIcon} alt="Twitter" className="link" />
                     <img src={YouTubeIcon} alt="Youtube" className="link" />
                     <img src={InstagramIcon} alt="Instagram" className="link" />
