@@ -1,0 +1,169 @@
+#projectsPage {
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectsTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.projectsDesc {
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 45rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.projectCard {
+    background: rgb(30, 30, 30);
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 22rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px);
+}
+
+.projectImgContainer {
+    position: relative;
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+}
+
+.projectImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hoverImg {
+    opacity: 0;
+}
+
+.mainImg.has-slideshow {
+    animation: cycleMainImg 6s infinite ease-in-out;
+}
+
+.hoverImg.has-slideshow {
+    animation: cycleHoverImg 6s infinite ease-in-out;
+}
+
+@keyframes cycleMainImg {
+    0%, 45% {
+        opacity: 1;
+        z-index: 2;
+    }
+    50%, 95% {
+        opacity: 0;
+        z-index: 1;
+    }
+    100% {
+        opacity: 1;
+        z-index: 2;
+    }
+}
+
+@keyframes cycleHoverImg {
+    0%, 45% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 95% {
+        opacity: 1;
+        z-index: 2;
+    }
+    100% {
+        opacity: 0;
+        z-index: 1;
+    }
+}
+
+.projectDetails {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.projectCardTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.projectCardDesc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: rgb(200, 200, 200);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    min-height: 4rem; /* කාඩ් ඔක්කොම එකම සයිස් එකට තියාගන්න */
+}
+
+.projectTechTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.techTag {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    color: yellow; /* ඔයාගේ Theme එකේ Yellow එකට ගැලපෙන්න */
+}
+
+.projectLinkBtn {
+    background: white;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    margin-top: auto; /* බටන් එක හැමවෙලේම කාඩ් එකේ පහළටම ගන්න */
+}
+
+.projectLinkBtn:hover {
+    background: rgb(220, 220, 220);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .projectCard {
+        width: 100%;
+        max-width: 25rem;
+    }
+}
