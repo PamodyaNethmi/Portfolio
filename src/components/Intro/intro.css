@@ -13,7 +13,7 @@
     top: -4rem;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 1;          
     object-fit: cover;
     height: 100vh;
     opacity: 0;
@@ -103,7 +103,9 @@
 
 .introContent {
     height: 100vh;
-    width: 100vw;
+    width: 100%;          
+    max-width: 75rem;     
+    margin: 0 auto;       
     padding: 2rem;
     font-size: 3rem;
     font-weight: 700;
@@ -112,6 +114,8 @@
     justify-content: center;
     padding-top: 0; 
     margin-top: -2rem;
+    position: relative;
+    z-index: 2;          
 }
 
 .hello {
@@ -135,6 +139,7 @@
     padding: 0.75rem 2rem;
     border: none;
     border-radius: 2rem;
+    cursor: pointer;
 }
 
 .btnImg {
@@ -144,28 +149,22 @@
 }
 
 @keyframes fadeInUpAndFloat {
-    
     0% {
         opacity: 1;
         transform: translateY(100px);
     }
-    
     20% {
         opacity: 1;
         transform: translateY(0px);
     }
-    
     60% {
         opacity: 1;
         transform: translateY(-15px);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0px); 
     }
-    
-   
 }
 
 @keyframes starsFlying {
@@ -179,14 +178,13 @@
 
 @keyframes starsFlyingContinuous {
     0% {
-        
         transform: translateY(0);
     }
     100% {
-        
         transform: translateY(-100vh); 
     }
 }
+
 
 @media screen and (max-width:840px) {
     .bg {
@@ -200,9 +198,38 @@
     }
 }
 
+
 @media screen and (max-width:480px) {
     .bg {
-        right: -20vw;
+        right: 0;
+        width: 100vw;     
+        height: 100vh;    
+        object-fit: cover;
+        opacity: 0.35;    
+        z-index: 1;       
     }
     
+    .introContent {
+        width: 100%;
+        height: 100vh;
+        text-align: center;      
+        align-items: center;     
+        justify-content: center;
+        padding: 1.5rem;
+        font-size: 2.2rem;       
+        z-index: 2;              
+    }
+
+    .hello {
+        font-size: 1.3rem;   
+    }
+
+    .introPara {
+        font-size: 0.95rem;
+        max-width: 90%;          
+    }
+
+    .btn {
+        margin: 1.5rem 0;
+    }
 }
