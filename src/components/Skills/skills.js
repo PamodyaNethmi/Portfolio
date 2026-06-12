@@ -7,8 +7,9 @@ import AppDesign from '../../assets/app-design.png';
 const Skills = () => {
     return (
         <section id='skills'>
-            <span className="skillTitle">What I do</span>
-            <span className="skillDesc">I am a skilled and passionate web designer with experience in creating visually appealing and user-friendly website. I have a strong understanding of design and a keen eye for detail.I am proficient in HTML, CSS, and JavaScript, as well as design software such as Adobe Photoshop and Illustrator.</span>
+            <span className="skillTitle">Who am I & What I do</span>
+            <span className="skillDesc"><span className="skillDesc">I am a passionate Computing student at ITUM, specializing in crafting clean, intuitive, and user-friendly web experiences. Proficient in HTML, CSS, JavaScript, and React.js, alongside creative design tools like Adobe Photoshop and Illustrator, I bridge the gap between complex frontend engineering and seamless UI/UX design. My goal is to secure an industry internship to leverage my skills in creating highly responsive and accessible applications that solve real-world problems.</span>
+            </span>
             <div className="skillBars">
                 <div className="skillBar">
                     <img src={UIDesign} alt="UIDesign" className="skillBarImg" />
