@@ -1,9 +1,6 @@
 import React, { useRef } from 'react';
 import './contact.css';
 import FacebookIcon from '../../assets/facebook-icon.png';
-import TwitterIcon from '../../assets/twitter.png';
-import YouTubeIcon from '../../assets/youtube.png';
-import InstagramIcon from '../../assets/instagram.png';
 import LinkedinIcon from '../../assets/linkedin.png';
 import emailjs from '@emailjs/browser';
 
@@ -38,9 +35,7 @@ const Contact = () => {
                 <div className="links">
                     <a href="https://www.linkedin.com/in/pamodya-nethmi-563b63370/" target="_blank" rel="noopener noreferrer"><img src={LinkedinIcon} alt="Linkedin" className="link linkedin" /></a>
                     <a href="https://www.facebook.com/share/17Z4DXtqyn/" target="_blank" rel="noopener noreferrer"><img src={FacebookIcon} alt="Facebook" className="link" /></a>
-                    <img src={TwitterIcon} alt="Twitter" className="link" />
-                    <img src={YouTubeIcon} alt="Youtube" className="link" />
-                    <img src={InstagramIcon} alt="Instagram" className="link" />
+            
                 </div>
             </form>
         </div>
